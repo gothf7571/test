@@ -6,7 +6,7 @@ function App() {
     const [message, setMessage] = useState('');
 
     useEffect(() => {
-        fetch('/api/hello')
+        fetch('/')
             .then(response => response.text())
             .then(data => setMessage(data));
     }, []);
@@ -14,7 +14,7 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
-                <h1>{message}</h1>
+                <h1></h1>
             </header>
         </div>
     );

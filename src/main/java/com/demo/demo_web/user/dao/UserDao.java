@@ -14,11 +14,8 @@ public class UserDao {
     @Qualifier("userSqlSession")
     SqlSessionTemplate sqlSessionTemplate;
 
-    public int getReportCount(SearchCriteria sc) {
-        return sqlSessionTemplate.selectOne("sql.user.getUserCount", sc);
-    }
-
-    public List<User> getReportList(SearchCriteria sc) {
-        return sqlSessionTemplate.selectList("sql.user.getUserList", sc);
+    public List<User> getUserList() {
+        return sqlSessionTemplate.selectList("sql.user.getUserList");
     }
 }
+
